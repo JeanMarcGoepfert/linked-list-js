@@ -5,21 +5,26 @@ describe('LinkedList', function () {
     var list = new LinkedList();
     list.push(10);
     list.push(20);
+    list.push(30);
+    expect(list.pop()).toBe(30);
     expect(list.pop()).toBe(20);
     expect(list.pop()).toBe(10);
   });
-  /*
   it('push/shift', function () {
     var list = new LinkedList();
     list.push(10);
     list.push(20);
+    list.push(30);
     expect(list.shift()).toBe(10);
     expect(list.shift()).toBe(20);
+    expect(list.shift()).toBe(30);
   });
   it('unshift/shift', function () {
     var list = new LinkedList();
     list.unshift(10);
     list.unshift(20);
+    list.unshift(30);
+    expect(list.shift()).toBe(30);
     expect(list.shift()).toBe(20);
     expect(list.shift()).toBe(10);
   });
@@ -27,8 +32,10 @@ describe('LinkedList', function () {
     var list = new LinkedList();
     list.unshift(10);
     list.unshift(20);
+    list.unshift(30);
     expect(list.pop()).toBe(10);
     expect(list.pop()).toBe(20);
+    expect(list.pop()).toBe(30);
   });
   it('example', function () {
     var list = new LinkedList();
@@ -70,5 +77,4 @@ describe('LinkedList', function () {
     list.push(10);
     list.delete(10);
   });
- */
 });
