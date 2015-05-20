@@ -1,8 +1,8 @@
 class Node {
-  constructor(value, prev, next) {
+  constructor(value) {
     this.value = value;
-    this.prev = prev || this;
-    this.next = next || this;
+    this.prev = this;
+    this.next = this;
   }
 }
 
@@ -30,9 +30,7 @@ class LinkedList {
     return this.remove(this.head);
   }
 
-  delete(value, node) {
-    node = node || this.head;
-
+  delete(value, node = this.head) {
     if (node.value === value) {
       return this.remove(node)
     } else if (node.next === this.head) {

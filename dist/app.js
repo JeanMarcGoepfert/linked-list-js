@@ -8,12 +8,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var Node = function Node(value, prev, next) {
+var Node = function Node(value) {
   _classCallCheck(this, Node);
 
   this.value = value;
-  this.prev = prev || this;
-  this.next = next || this;
+  this.prev = this;
+  this.next = this;
 };
 
 var LinkedList = (function () {
@@ -50,8 +50,8 @@ var LinkedList = (function () {
     }
   }, {
     key: "delete",
-    value: function _delete(value, node) {
-      node = node || this.head;
+    value: function _delete(value) {
+      var node = arguments[1] === undefined ? this.head : arguments[1];
 
       if (node.value === value) {
         return this.remove(node);
